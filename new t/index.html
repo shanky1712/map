@@ -10,10 +10,36 @@
 
 -->
 
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>Fullscreen Slit Slider with CSS3 and jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Direction-Aware Hover Effect Fullscreen Slit Slider with CSS3 and jQuery" />
+        <meta name="keywords" content="slit slider, plugin, css3, transitions, jquery, fullscreen, autoplay, hover, effect, direction, aware, depending, thumbnails" />
+        <meta name="author" content="Codrops" />
+        
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link href='http://fonts.googleapis.com/css?family=Alegreya+SC:700,400italic' rel='stylesheet' type='text/css' />
+        <script src="js/modernizr.custom.97074.js"></script>
+        <noscript><link rel="stylesheet" type="text/css" href="css/noJS.css"/></noscript>
+        
+        <link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
+		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+		</noscript>
 		<!--BEGIN css stylesheets -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+		
+		<script type="text/javascript" src="js/jQuery-LavaLamp-master/jquery.lavalamp.js"></script>
+		<script type="text/javascript" src="js/jQuery-LavaLamp-master/jquery.lavalamp.min.js"></script>
+		<script type="text/javascript" src="js/scripts.js"></script>
+		<script type="text/javascript" src="js/smoothjquery.js"></script>
 		<!--END  css stylesheets -->
 		<title>sample</title>
 	</head>
@@ -28,27 +54,22 @@
 				<div class="container clearfix">
 
             <!-- BEGIN #logo -->
-            <div id="logo"><a href="home.html"><img src="assets/images/sitelogo.png" width="222" height="99" alt="hi-buddy"></a></div>
+            <div id="logo"><a href="home.html"><img src="images/heybuddy.png" width="180" height="60" alt="hi-buddy"></a></div>
             <!-- END #logo -->
 
 
 			<!-- BEGIN #navigation -->
-			<ul id="navigation">
-				<li class="current"><a href="home.html"><span class="menu-number">00</span> HOME </a></li>
-				<li><a href="#"><span class="menu-number">01</span> ABOUT </a></li>
-				<li class="parent"><a href="#"><span class="menu-number">04</span> SERVICES </a>
-					<ul>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">404 page</a></li>
-					</ul>                    
-				</li>
-				<li><a href="#"><span class="menu-number">05</span> BLOG </a></li>
-				<li><a href="#"><span class="menu-number">06</span> CONTACT </a></li>
+			<ul id="returnHomeDemo" class="navigation">
+				<li class="current"><a href="home.html"><span class="menu-number"></span> HOME </a></li>
+				<li><a href="#about-content"><span class="menu-number"></span> ABOUT </a></li>
+				<li class="parent"><a href="#services-content"><span class="menu-number"></span> SERVICES </a></li>
+				<li><a href="#"><span class="menu-number"></span> BLOG </a></li>
+				<li><a href="#"><span class="menu-number"></span> CONTACT </a></li>
 			</ul>
 			<!-- END #navigation --> 
 			
 			
-				# HEADER CONTENT GOES HERE (logo, page info, page number, ribbon ) #
+				<!--# HEADER CONTENT GOES HERE (logo, page info, page number, ribbon ) #-->
 
             <!-- BEGIN #ribbon -->
             <div id="ribbon"></div>
@@ -65,21 +86,254 @@
 				<div class="container clearfix"> 
 
 					<!-- BEGIN #sidebar -->
-					<div id="sidebar" class="aside"> 
+					<!--<div id="sidebar" class="aside"> 
 		   
 					# SIDEBAR CONTENT GOES HERE (navigation, searchbox, side wigets) #
 
-					</div>
+					</div>-->
 					<!-- END #sidebar --> 
 
 					<!-- BEGIN #main-content -->
 					<div id="main-content" class="content clearfix"> 
+					<!-- BEGIN #slidebar -->
+					
+					
+					       <div class="container demo-2">
+            <div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider">
+				
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-1"></div>
+							<h2>A bene placito.</h2>
+							<blockquote><p>You have just dined, and however scrupulously the slaughterhouse is concealed in the graceful distance of miles, there is complicity.</p><cite>Ralph Waldo Emerson</cite></blockquote>
+						</div>
+					</div>
+					
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-2"></div>
+							<h2>Regula aurea.</h2>
+							<blockquote><p>Until he extends the circle of his compassion to all living things, man will not himself find peace.</p><cite>Albert Schweitzer</cite></blockquote>
+						</div>
+					</div>
+					
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-3"></div>
+							<h2>Dum spiro, spero.</h2>
+							<blockquote><p>Thousands of people who say they 'love' animals sit down once or twice a day to enjoy the flesh of creatures who have been utterly deprived of everything that could make their lives worth living and who endured the awful suffering and the terror of the abattoirs.</p><cite>Dame Jane Morris Goodall</cite></blockquote>
+						</div>
+					</div>
+					
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-4"></div>
+							<h2>Donna nobis pacem.</h2>
+							<blockquote><p>The human body has no more need for cows' milk than it does for dogs' milk, horses' milk, or giraffes' milk.</p><cite>Michael Klaper M.D.</cite></blockquote>
+						</div>
+					</div>
+					
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-5"></div>
+							<h2>Acta Non Verba.</h2>
+							<blockquote><p>I think if you want to eat more meat you should kill it yourself and eat it raw so that you are not blinded by the hypocrisy of having it processed for you.</p><cite>Margi Clarke</cite></blockquote>
+						</div>
+					</div>
+				</div><!-- /sl-slider -->
+
+				<nav id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</nav>
+
+			</div><!-- /slider-wrapper -->
+
+<!--ABOUT PAGE CONTENT-->
+<div id="about-content">
+			<div class="content-wrapper">
+				<h2>About this slider</h2>
+				<p>The Slit Slider is a slideshow with a twist: the idea is to slice open the current slide when navigating to the next or previous one. Using jQuery and CSS animations we can create unique slide transitions for the content elements. </p>
+			</div>
+		</div>
+</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+		<script type="text/javascript" src="js/jquery.slitslider.js"></script>
+		<script type="text/javascript">	
+			$(function() {
+			
+				var Page = (function() {
+
+					var $nav = $( '#nav-dots > span' ),
+						slitslider = $( '#slider' ).slitslider( {
+							onBeforeChange : function( slide, pos ) {
+
+								$nav.removeClass( 'nav-dot-current' );
+								$nav.eq( pos ).addClass( 'nav-dot-current' );
+
+							}
+						} ),
+
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							$nav.each( function( i ) {
+							
+								$( this ).on( 'click', function( event ) {
+									
+									var $dot = $( this );
+									
+									if( !slitslider.isActive() ) {
+
+										$nav.removeClass( 'nav-dot-current' );
+										$dot.addClass( 'nav-dot-current' );
+									
+									}
+									
+									slitslider.jump( i + 1 );
+									return false;
+								
+								} );
+								
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+				/**
+				 * Notes: 
+				 * 
+				 * example how to add items:
+				 */
+
+				/*
+				
+				var $items  = $('<div class="sl-slide sl-slide-color-2" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1"><div class="sl-slide-inner bg-1"><div class="sl-deco" data-icon="t"></div><h2>some text</h2><blockquote><p>bla bla</p><cite>Margi Clarke</cite></blockquote></div></div>');
+				
+				// call the plugin's add method
+				ss.add($items);
+
+				*/
+			
+			});
+		</script>
+					
+					
+					<!-- END #slidebar -->
 
 					<div  class="first-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 					
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
 
+					<!-- BEGIN # mouse hover directionslide -->
+					
+					
+				<div id="services-content">
+					<h1>SERVICES</h1>
+					<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="http://dribbble.com/shots/505046-Menu">
+							<img src="images/m1.jpg" />
+							<div><span>Menu by Simon Jensen</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/504336-TN-Aquarium">
+							<img src="images/m2.jpg" />
+							<div><span>TN Aquarium by Charlie Gann</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/504197-Mr-Crabs">
+							<img src="images/m3.jpg" />
+							<div><span>Mr. Crabs by John Generalov</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/503731-Gallery-of-Mo-2-Mo-logo">
+							<img src="images/m4.jpg" />
+							<div><span>Gallery of Mo 2.Mo logo by Adam Campion</span></div>
+						</a>
+					</li>
+					<li>	
+						<a href="http://dribbble.com/shots/503058-Ice-Cream-nom-nom">
+							<img src="images/m5.jpg" />
+							<div><span>Ice Cream - nom nom by Eight Hour Day</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/502927-My-Muse">
+							<img src="images/m6.jpg" />
+							<div><span>My Muse by Zachary Horst</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/502538-Natalie-Justin-Cleaning">
+							<img src="images/m7.jpg" />
+							<div><span>Natalie & Justin Cleaning by Justin Younger</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/502523-App-Preview">
+							<img src="images/m8.jpg" />
+							<div><span>App Preview by Ryan Deshler</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/501695-Cornwall-Map">
+							<img src="images/m9.jpg" />
+							<div><span>Cornwall Map by Katharina Maria Zimmermann</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/500861-final-AD-logo">
+							<img src="images/m10.jpg" />
+							<div><span>final AD logo by Annette Diana</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/500369-Land-Those-Planes">
+							<img src="images/m11.jpg" />
+							<div><span>Land Those Planes by Lee Ann Marcel</span></div>
+						</a>
+					</li>
+					<li>
+						<a href="http://dribbble.com/shots/497795-Seahorse">
+							<img src="images/m12.jpg" />
+							<div><span>Seahorse by Trevor Basset</span></div>
+						</a>
+					</li>
+				</ul>
+			</section></div>
+        </div>
+		<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
+		<script type="text/javascript">
+			$(function() {
+			
+				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
 
+			});
+		</script>
+					
+					
+					<!-- END #mouse hover directionslide -->
 
 					<!-- BEGIN Testimonial .content-slider -->
 					<div class="content-slider testimonials-slider">
